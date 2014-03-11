@@ -11,6 +11,10 @@ Squawker::Application.routes.draw do
     resource :favorite, only: [:create]
     get :autocomplete_user_username, :on => :collection
   end
+  get 'users/applicants/index', to: 'applicants#index'
+  resources :applicants, only: [:index, :create, :destroy] do
+    get :autocomplete_user_username, :on => :collection
+  end
   resources :users, only: [:show]
   resources :relationships, only: [:create]
 
