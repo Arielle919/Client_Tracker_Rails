@@ -1,0 +1,26 @@
+.row
+  .small-offset-3.small-9.columns
+    %h2.subheader Edit Your Profile
+
+  = simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
+    = devise_error_messages!
+    .inputs
+      .row
+        .small-offset-3.small-6.columns
+          = f.input :email
+      .row
+        .small-offset-3.small-6.columns
+          = f.input :tagline
+      .row
+        .small-offset-3.small-6.columns
+          = f.input :password, hint: "(leave blank if you don't want to change it)"
+      .row
+        .small-offset-3.small-6.columns
+          = f.input :password_confirmation, label: "Password Confirmation"
+      .row
+        .small-offset-3.small-6.columns
+          = f.input :current_password, hint: "(we need your current password to confirm your changes)"
+    .actions
+      .row
+        .small-offset-3.small-3.columns
+          = f.button :submit, 'Save Changes', class: 'button tiny radius'
