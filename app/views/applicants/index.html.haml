@@ -3,6 +3,7 @@
     .row
       .small-6.columns
         = f.input :client_name, label: 'Client Name:'
+        = f.input :date_created, label: 'Date you started working with client'
         = f.input :phone, label: 'Client Contact:'
         = f.input :task_date, label: 'Task Date:'
         = f.input :task, label: 'Task', :url => autocomplete_user_username_applicants_path, :as => :text
@@ -29,3 +30,4 @@
     .row
       .small-6.columns
         = f.button :submit, 'Create Client', class: 'button tiny radius'
+

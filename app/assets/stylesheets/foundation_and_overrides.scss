@@ -1205,7 +1205,7 @@ $thumb-border-color: scale-color(#fff, $alpha: -20%);;
 //     background-size: cover;
 // }
 
-// // image from http://pixabay.com/en/tucan-bird-parrot-colorful-beak-155252/
+// image from http://pixabay.com/en/tucan-bird-parrot-colorful-beak-155252/
 // #tucan{
 //   display: inline;
 //   position:absolute;
@@ -1219,20 +1219,20 @@ $thumb-border-color: scale-color(#fff, $alpha: -20%);;
 //   text-shadow: 1px 1px rgb(189,189,189);
 // }
 
-// .contain-to-grid .top-bar{margin-bottom: 20px;}
+.contain-to-grid .top-bar{margin-bottom: 20px;}
 
-// .row + .row { margin-top: 1.5em; }
+.row + .row { margin-top: 1.5em; }
 
-// ul.squeeks {
-//   list-style-type: none;
-//   margin: 0;
-//   li.squeek {
-//     @include panel;
-//     img {
-//       margin: 0 1.25em 0 0;
-//     }
-//   }
-// }
+ul.squeeks {
+  list-style-type: none;
+  margin: 0;
+  li.squeek {
+    @include panel;
+    img {
+      margin: 0 1.25em 0 0;
+    }
+  }
+}
 
 
 .green-font{color:#28432C;}

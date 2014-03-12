@@ -9,8 +9,8 @@ class User < ActiveRecord::Base
   include Gravtastic
   has_gravatar size: 300
 
+  has_many :applicants, :inverse_of => :user
   has_many :squeeks, :inverse_of => :user
-  has_many :clients, :inverse_of => :user
   has_many :relationships, foreign_key: "consumer_id"
   has_many :reverse_relationships, foreign_key: "broadcaster_id", class_name: "Relationship"
   has_many :broadcasters, through: :relationships, source: :broadcaster

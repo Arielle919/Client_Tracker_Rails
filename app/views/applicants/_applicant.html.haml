@@ -1,0 +1,19 @@
+
+%li.squeek
+  .row
+    .small-3.columns
+
+
+    .small-9.columns
+      %p= applicant.client_name
+      %p= applicant.date_created
+      %p= applicant.phone
+
+  .row
+    .small-12.columns
+      .small-6.columns
+        = button_to("Delete", applicant_path(applicant), method: :delete, data: {id: applicant.id }, class: "button right" )
+      .small-6.columns
+        = button_to("Edit", applicant_path(applicant), method: :edit, data: {id: applicant.id }, class: "button right" )
+
+
