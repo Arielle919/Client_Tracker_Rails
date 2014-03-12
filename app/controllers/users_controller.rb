@@ -4,4 +4,7 @@ class UsersController < ApplicationController
     @consumers = @user.consumers
     @broadcasters = @user.broadcasters
   end
+
+
+
 end

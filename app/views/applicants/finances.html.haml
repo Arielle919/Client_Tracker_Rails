@@ -1,0 +1,17 @@
+.row
+  .small-12.columns
+    .add-btn
+      %a{href: 'applicants/index'} ADD CLIENT
+    %h3.green-font FINANCES
+    .app-nav
+      %ul
+        %li
+          %a{href: '#'} NAME
+        %li
+          %a{href: '#'} DATE
+        %li
+          %a{href: '#'} TASK
+  .small-12.columns
+    .row-temp
+      / = render @user.applicants
+

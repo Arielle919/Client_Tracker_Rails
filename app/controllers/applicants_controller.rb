@@ -33,6 +33,18 @@ class ApplicantsController < ApplicationController
     # redirect_to :back
   end
 
+  def tasks
+
+  end
+
+  def finances
+
+  end
+
+  def schedule
+
+  end
+
   private
 
   def load_applicants

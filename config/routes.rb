@@ -13,7 +13,11 @@ Squawker::Application.routes.draw do
   end
   get 'users/applicants/index', to: 'applicants#index'
   get 'users/applicants/update', to: 'applicants#update'
-  resources :applicants, only: [:index, :create, :destroy, :update] do
+  get 'users/applicants/tasks', to: 'applicants#tasks'
+  get 'users/applicants/finances', to: 'applicants#finances'
+  get 'users/applicants/schedule', to: 'applicants#schedule'
+
+  resources :applicants, only: [:index, :create, :destroy, :update, :tasks, :finances, :schedule] do
     get :autocomplete_user_username, :on => :collection
   end
   resources :users, only: [:show]

@@ -1,16 +1,14 @@
 - if user_signed_in?
   .row
     .small-12.columns
-      .panel
-        %h2
-        = render partial: "squeeks/new"
+      %h2
+      = render partial: "squeeks/new"
 - else
   .row
     .small-9.columns
-      .panel
-        %p
-          = link_to "Sign in", new_user_session_path
-          or
-          = link_to "Sign up", new_user_registration_path
-          to post a squeek.
+      %p
+        = link_to "Sign in", new_user_session_path
+        or
+        = link_to "Sign up", new_user_registration_path
+        to post a squeek.
 
