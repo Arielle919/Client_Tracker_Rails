@@ -1235,6 +1235,12 @@ $thumb-border-color: scale-color(#fff, $alpha: -20%);;
 .text_container{
   display: none;
 }
+.show_container{
+background-color: #28432C;
+opacity: 0.5;
+width:100%;
+height:100%;
+}
 
 .green-font{color:#28432C;}
 .bold{font-weight:bold;}
@@ -1277,10 +1283,27 @@ body{font-family: 'Lusitana', serif; background-color:#AA9F8C;}/*tan color*/
     list-style-type:none;
     display:block;
     line-height: 30px;
-    float:left;padding-right:0px; padding-left:110px; color:#28432C;
+    float:left;padding-right:0px; padding-left:168px; color:#28432C;
     }
 }
 
+.titlesH1{
+  background-color:transparent;
+  width:100%;
+  height:30px;
+  color: #AA9F8C;
+  font-weight: bold;
+  font-size:24px;
+}
+.li_details{
+  color: white;
+  font-weight: bold;
+  font-size:20px;
+  list-style-type: none;
+}
+.white_font a{color:#DCD4D4; font-weight:bold; background-color:#AA9F8C; }
+.click_hide{};
+.click_hide a{font-weight:bold; font-size:16px; color:#28432C;}
 .add-btn{
   float:right;
   height:44px;
@@ -1307,9 +1330,16 @@ body{font-family: 'Lusitana', serif; background-color:#AA9F8C;}/*tan color*/
   width:100px;
   line-height: 50px;
   text-align: center;
-  a{color: white;}
-  a:hover{color:#829B86;}/*light green*/
+  color:white;
   float:left;
+}
+.view-btn a{color: white;}
+.view-btn a:hover{color:#829B86;}/*light green*/
+
+.placeholder_box{
+width:100%;
+height:500px;
+background-color:transparent;
 }
 
 .edit-delete-wrapper{
@@ -1366,6 +1396,7 @@ color:#829B86;
   height:48px;
   width:100%;
   background-color: transparent;
+  margin-top:10px;
   ul{
     text-decoration: none;
     li{
@@ -1381,7 +1412,7 @@ color:#829B86;
 }
 
 .del_btn{
-
+float:right;
 }
 
 .button {background-color:#28432C; color:#829B86;}

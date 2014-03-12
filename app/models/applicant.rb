@@ -4,7 +4,7 @@
 
   attr_accessor :ip_address
 
-  validates_presence_of  :client_name, :date_created, :phone, :task_date, :task, :billed_date, :amount, :app_date, :app_time, :app_notes
+  validates_presence_of  :client_name, :date_created, :phone, :task_date, :task, :billed_date, :amount, :app_date, :app_time, :app_notes, :payment_type
   validates_presence_of :user
 
   belongs_to :user

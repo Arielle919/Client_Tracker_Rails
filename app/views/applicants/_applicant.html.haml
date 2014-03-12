@@ -1,21 +1,39 @@
 .client_row
   %ul
     %li
+      %li
+        %a=link_to "VIEW", '#', class: "show_content view-btn"
       .client_lister
         %ul
           %li= applicant.client_name
           %li= applicant.date_created
           %li= applicant.phone
-          %li
-            %a=link_to "VIEW", '#', class: "show_content"
-          .li_size
-            %li= button_to("Delete", applicant_path(applicant), method: :delete, data: {id: applicant.id }, class: "button small del_btn" )
+        %li= button_to("Delete", applicant_path(applicant), method: :delete, data: {id: applicant.id }, class: "button small del_btn" )
 
-          / %span= button_to("Delete", applicant_path(applicant), method: :delete, data: {id: applicant.id }, class: "button small del_btn" )
+  .row.show_container
+    .small-6.columns
+      .text_container
+        .white_font
+          %a=link_to "HIDE DETAILS", '#', class: "click_hide"
+        %h5.titlesH1 Appointment Date
+        %li.li_details= applicant.app_date
+        %h5.titlesH1 Appointment Time
+        %li.li_details= applicant.app_time
+        %h5.titlesH1 Appointment Notes
+        %li.li_details= applicant.app_notes
+    .small-6.columns
+      .text_container
+        %h5.titlesH1 Task Date
+        %li.li_details= applicant.task_date
+        %h5.titlesH1 Task
+        %li.li_details= applicant.task
+        %h5.titlesH1 Payment Method
+        %li.li_details= applicant.payment_type
+        %h5.titlesH1 Amount Paid
+        %li.li_details= applicant.amount
+        .placeholder_box
 
-  .text_container
-    %p this is the main div
-    .divHidden
-      %p this is the div I want to hide
+
+
 
 

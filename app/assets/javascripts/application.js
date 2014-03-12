@@ -24,4 +24,8 @@ $(function() {
     event.preventDefault();
     $('div.text_container').toggle();
   });
+  $('a.click_hide').click(function(event){
+    event.preventDefault();
+    $('div.text_container').toggle();
+  });
 });

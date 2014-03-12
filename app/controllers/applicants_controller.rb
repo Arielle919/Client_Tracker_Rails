@@ -7,7 +7,7 @@ class ApplicantsController < ApplicationController
   end
 
   def create
-    applicant_params = params.require(:applicant).permit(:consumers_only, :body, :client_name, :date_created, :phone, :task_date, :task, :billed_date, :amount, :app_date, :app_time, :app_notes)
+    applicant_params = params.require(:applicant).permit(:consumers_only, :body, :client_name, :date_created, :phone, :task_date, :task, :billed_date, :amount, :app_date, :app_time, :app_notes, :payment_type)
     @applicant = current_user.applicants.new(applicant_params)
     @applicant.ip_address = request.remote_ip
     if @applicant.save
