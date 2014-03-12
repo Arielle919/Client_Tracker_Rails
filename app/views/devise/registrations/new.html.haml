@@ -13,11 +13,6 @@
           = f.input :password_confirmation, label: 'Password confirmation'
         .actions
           = f.button :submit, 'Sign up', class: 'button radius'
-  .small-12.medium-6.columns
-    .panel
-      %p Alternatively, you can sign up via. Twitter!
-      - resource_class.omniauth_providers.each do |provider|
-        = link_to "Sign up with #{provider.to_s.titleize}", omniauth_authorize_path(resource_name, provider), class: "button"
-.row
+  .row
   .small-3.columns
     = render "devise/shared/links"
