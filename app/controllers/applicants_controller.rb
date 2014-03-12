@@ -45,6 +45,10 @@ class ApplicantsController < ApplicationController
 
   end
 
+  def single
+    @single_name = Applicant.all
+  end
+
   private
 
   def load_applicants

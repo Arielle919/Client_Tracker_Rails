@@ -18,3 +18,10 @@
 //= require autosuggest_reply_usernames
 
 $(function(){ $(document).foundation(); });
+
+$(function() {
+  $('a.show_content').click(function(event){
+    event.preventDefault();
+    $('div.text_container').toggle();
+  });
+});

@@ -68,24 +68,8 @@ ActiveRecord::Schema.define(version: 20141102053900) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+    t.string   "date_created"
     t.boolean  "hidden",       default: false, null: false
-    t.string   "date_created"
-  end
-
-  create_table "clients", force: true do |t|
-    t.string   "client_name"
-    t.string   "date_created"
-    t.string   "phone"
-    t.string   "task_date"
-    t.text     "task"
-    t.string   "billed_date"
-    t.string   "payment_type"
-    t.string   "amount"
-    t.string   "appointment_date"
-    t.string   "appointment_time"
-    t.text     "appointment_notes"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "favorites", force: true do |t|

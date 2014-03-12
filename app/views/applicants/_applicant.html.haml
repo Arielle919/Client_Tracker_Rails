@@ -6,7 +6,16 @@
           %li= applicant.client_name
           %li= applicant.date_created
           %li= applicant.phone
+          %li
+            %a=link_to "VIEW", '#', class: "show_content"
+          .li_size
+            %li= button_to("Delete", applicant_path(applicant), method: :delete, data: {id: applicant.id }, class: "button small del_btn" )
 
-          %span= button_to("Delete", applicant_path(applicant), method: :delete, data: {id: applicant.id }, class: "button small del_btn" )
+          / %span= button_to("Delete", applicant_path(applicant), method: :delete, data: {id: applicant.id }, class: "button small del_btn" )
+
+  .text_container
+    %p this is the main div
+    .divHidden
+      %p this is the div I want to hide
 
 

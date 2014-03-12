@@ -1232,7 +1232,9 @@ $thumb-border-color: scale-color(#fff, $alpha: -20%);;
 //     }
 //   }
 // }
-
+.text_container{
+  display: none;
+}
 
 .green-font{color:#28432C;}
 .bold{font-weight:bold;}
@@ -1269,13 +1271,13 @@ body{font-family: 'Lusitana', serif; background-color:#AA9F8C;}/*tan color*/
   background-color: #DCD4D4;
   color:white;
   height:30px;
-  a {float:left;padding-right:191px; padding-left:20px; color:#28432C;}
+  a {}
   ul{margin-left:0px;}
   li{
     list-style-type:none;
     display:block;
     line-height: 30px;
-    border-right:1px solid white;
+    float:left;padding-right:0px; padding-left:110px; color:#28432C;
     }
 }
 
@@ -1348,6 +1350,8 @@ color:#829B86;
 
 .client_row{
   color:white;
+  width:970px;
+  background-color: transparent;
   ul{
     text-decoration:none;
     margin-top:0px;
@@ -1367,17 +1371,17 @@ color:#829B86;
     li{
       list-style-type: none;
       float:left;
-      padding-right:186px;
-      padding-left:20px;
+      padding-right:0px;
+      padding-left:110px;
       display:block;
       line-height:20px;
+      li:last-child{padding-right:0px;}
     }
   }
 }
 
 .del_btn{
-  float:right;
-  margin-top:-20px;
+
 }
 
 .button {background-color:#28432C; color:#829B86;}
