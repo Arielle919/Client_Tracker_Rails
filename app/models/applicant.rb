@@ -22,6 +22,22 @@
     self.save
   end
 
+  # def update
+  #   @applicant = Applicant.find(params[:id])
+
+  #   if @applicant.update(applicant_params)
+  #     redirect_to @applicant
+  #   else
+  #     render 'edit'
+  #   end
+  # end
+
+  # def update
+  #   @applicant = Applicant.find(params[:id])
+  #   self.hidden = true
+  #   self.save
+  # end
+
   def viewable_by? current_user
     return true unless self.consumers_only?
     self.user.consumers.include? current_user or self.user == current_user

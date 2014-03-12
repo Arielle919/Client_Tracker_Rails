@@ -2,7 +2,7 @@
   .row
     .small-12.columns
       .panel
-        %h2 Squeek!
+        %h2
         = render partial: "squeeks/new"
 - else
   .row
@@ -13,8 +13,4 @@
           or
           = link_to "Sign up", new_user_registration_path
           to post a squeek.
-.row
-  .small-9.columns
-    %ul.squeeks.squawked
-      = render @squeeks
-    = paginate @squeeks
+

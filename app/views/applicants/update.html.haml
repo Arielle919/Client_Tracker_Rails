@@ -1,0 +1,38 @@
+.row
+  .small-12.columns
+    %h2 Edit Client
+
+/ = simple_form_for @applicant, :html => {:multipart => true} do |f|
+/   = devise_error_messages!
+/   .inputs
+/     .row
+/       .small-6.columns
+/         %h3 Edit Client
+/         = f.input :client_name, label: 'Client Name:'
+/         = f.input :date_created, label: 'Date you started working with client'
+/         = f.input :phone, label: 'Client Contact:'
+/         = f.input :task_date, label: 'Task Date:'
+/         = f.input :task, label: 'Task', :url => autocomplete_user_username_applicants_path, :as => :text
+/         = f.input :billed_date, label: 'Billed Date:'
+/         =label_tag(:payment_type_text, "Payment Type")
+/         %p
+/         =check_box_tag(:flat_fee_text, "Flat Fee")
+/         =label_tag(:flat_fee_text, "Flat Fee")
+
+/         =check_box_tag(:weekly_text, "Weekly")
+/         =label_tag(:weekly_text, "Weekly")
+
+/         =check_box_tag(:monthly_text, "Monthly")
+/         =label_tag(:monthly_text, "Monthly")
+
+/         =check_box_tag(:yearly_text, "Yearly")
+/         =label_tag(:yearly_text, "Yearly")
+/         %p
+/       .small-6.columns
+/         = f.input :amount, label: 'Amount:'
+/         = f.input :app_date, label: 'Appointment Date:'
+/         = f.input :app_time, label: 'Appointment Time:'
+/         = f.input :app_notes, label:'Appointment Notes:', :url => autocomplete_user_username_applicants_path, :as => :text
+/     .row
+/       .small-6.columns
+/         = f.button :submit, 'Update Client', class: 'button tiny radius'

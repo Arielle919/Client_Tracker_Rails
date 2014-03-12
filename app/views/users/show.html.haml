@@ -1,31 +1,17 @@
 .row
   .small-12.columns
-    .row
-      .small-6.medium-3.columns
-        = image_tag @user.gravatar_url, class: "th radius"
-      .small-12.medium-6.columns
-        %h1= "@#{@user.username}'s profile"
-        .panel
-          %p= @user.tagline
-          %a{href: 'applicants/index'} Clients Page
-      .small-12.medium-3.columns
-        - if current_user == @user
-          = link_to "Edit Your Profile", edit_user_registration_path, class: "button"
-        - elsif @user.consuming?(current_user)
-          %p You are broadcasting to @#{@user.username}.
-        - elsif current_user
-          %div#add_consumer_form
-            = form_for(current_user.relationships.build(broadcaster_id: @user.id)) do |f|
-              = f.hidden_field :broadcaster_id
-              = f.submit "Broadcast to @#{@user.username}", class: "button"
-.row
-  .small-6.columns
-    %h2 Squeeks:
-    %ul.squeeks.squawked
-      = render @user.squeeks
+    .add-btn
+      %a{href: 'applicants/index'} ADD CLIENT
+    %h3.green-font CLIENTS
+    .app-nav
+      %ul
+        %li
+          %a{href: '#'} NAME
+        %li
+          %a{href: '#'} DATE CREATED
+        %li
+          %a{href: '#'} PHONE
+  .small-12.columns
+    .row-temp
       = render @user.applicants
 
-  .small-6.columns
-    %h2 Favorites:
-    %ul.squeeks.favorites
-      = render @user.favorite_squeeks

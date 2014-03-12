@@ -26,10 +26,19 @@ class ApplicantsController < ApplicationController
     redirect_to :back
   end
 
+  def update
+    # applicant = Applicant.find(params[:id])
+    # applicant.update
+    # flash[:alert] = "Your applicant has been updated"
+    # redirect_to :back
+  end
+
   private
 
   def load_applicants
     @applicants = Applicant.page params[:page]
   end
 end
+
+
 

@@ -17,7 +17,10 @@
         %section.top-bar-section
           %ul.right
             - if current_user
-              %li= link_to "My Profile", user_path(current_user)
+              %li= link_to "Clients", user_path(current_user)
+              %li= link_to "Tasks", "#"
+              %li= link_to "Finances", "#"
+              %li= link_to "Schedule", "#"
               %li.divider
               %li= link_to "Sign Out", destroy_user_session_path, method: :delete
             - else
