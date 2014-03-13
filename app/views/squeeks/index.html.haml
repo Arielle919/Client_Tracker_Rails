@@ -5,10 +5,11 @@
       = render partial: "squeeks/new"
 - else
   .row
-    .small-9.columns
-      %p
-        = link_to "Sign in", new_user_session_path
+    .small-12.columns
+      %p.reg_font
+        Welcome to Client Tracker
+        = link_to "Sign in", new_user_session_path, class: 'reg_font'
         or
-        = link_to "Sign up", new_user_registration_path
+        = link_to "Sign up", new_user_registration_path, class: 'reg_font'
         to create a client.
 
